@@ -64,10 +64,23 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   }
 });
 
-// Define the function that displays the summary
-const displaySummary = (summary) => {
-  // Create a new tab with the summary content when the "Summarize" button is clicked
-  const summaryUrl = `data:text/html,<html><body><p>${summary}</p></body></html>`;
-  chrome.tabs.create({ url: summaryUrl });
-};
+// const displaySummary = (summary) => {
+//   // Create a new tab with the summary content when the "Summarize" button is clicked
+//   const summaryUrl = `data:text/html,<html><head><title>Summary</title></head><body><p>${summary}</p></body></html>`;
+//   chrome.tabs.create({ url: summaryUrl });
+// };
 
+
+const displaySummary = (summary) => {
+  // Load the summary page HTML file
+  fetch(chrome.runtime.getURL("summary.html"))
+    .then(response => response.text())
+    .then(html => {
+      // Insert the summary content into the page HTML
+      const summaryHtml = html.replace("{{summary}}", summary);
+      
+      // Create a new tab with the summary page
+      chrome.tabs.create({ url: "data:text/html;charset=UTF-8," + encodeURIComponent(summaryHtml) });
+    })
+    .catch(error => console.error(error));
+};

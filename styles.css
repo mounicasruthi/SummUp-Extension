@@ -1,60 +1,58 @@
 /* Main Body */
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
-    font-family: 'Helvetica Neue', sans-serif;
-    width: 400px;
-    height: 500px;
-  }
-  
-  /* Title */
+  margin: 0;
+  padding: 0;
+  background-color: #E9EBF8;
+  font-family: Arial, sans-serif;
+  width: 400px;
+  height: 500px;
+}
+
+/* Title */
+.title {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 3rem;
+  color: #333E66;
+}
+
+/* Tagline */
+.tagline {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  color: #888;
+}
+
+/* Summarize Button */
+#summarize-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  background-color: #BAC6FF;
+  color: #fff;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#summarize-btn:hover {
+  background-color: #A5B2F5;
+}
+
+/* Responsive design */
+@media only screen and (max-width: 600px) {
   .title {
-    font-size: 3rem;
-    text-align: center;
-    margin-top: 3rem;
-    color: #333;
-    text-shadow: 1px 1px 2px #ddd;
+    font-size: 2rem;
   }
-  
-  /* Tagline */
   .tagline {
-    font-size: 1.2rem;
-    text-align: center;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-    color: #999;
+    font-size: 1rem;
   }
-  
-  /* Summarize Button */
   #summarize-btn {
-    display: block;
-    margin: 0 auto;
-    padding: 1rem 2rem;
-    background-color: #4285f4;
-    color: #fff;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
   }
-  
-  #summarize-btn:hover {
-    background-color: #3677d6;
-  }
-  
-  /* Responsive design */
-  @media only screen and (max-width: 600px) {
-    .title {
-      font-size: 2rem;
-    }
-    .tagline {
-      font-size: 1rem;
-    }
-    #summarize-btn {
-      font-size: 1rem;
-      padding: 0.8rem 1.5rem;
-    }
-  }
-  
+}

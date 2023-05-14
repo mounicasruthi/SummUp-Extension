@@ -55,24 +55,27 @@
     return true;
   }
 });
-
+  
   function summarize(articleText) {
     return new Promise((resolve, reject) => {
-      // Your summarization algorithm goes here...
-      // For example, you could use an external summarization API or implement your own summarization algorithm
-      
-      // Here's a simple example that just extracts the first sentence of the article text as the summary
-      const summary = articleText.split('. ')[0];
-      
-      if (summary) {
-        resolve(summary);
-      } else {
-        reject(new Error('Failed to summarize article'));
+      try {
+        // Split article text into paragraphs
+        const paragraphs = articleText.split("\n\n");
+  
+        // Filter out small paragraphs and keep only big ones
+        const bigParagraphs = paragraphs.filter((para) => para.length > 100);
+  
+        // Get the first big paragraph as summary
+        const summary = bigParagraphs[0];
+  
+        if (summary) {
+          resolve(summary);
+        } else {
+          reject(new Error('Failed to summarize article'));
+        }
+      } catch (error) {
+        reject(error);
       }
     });
   }
   
-
-  
-  
-
