@@ -3,7 +3,7 @@ async function summarize(articleText) {
     // Set up the API request
     const requestHeaders = new Headers({
       "Content-Type": "application/json",
-      "Authorization": "Bearer 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"
+      "Authorization": "Bearer <your_openai_api_key>"
     });
   
     const requestBody = JSON.stringify({
@@ -41,7 +41,7 @@ async function answerQuestion(articleText, question) {
     console.log("hi")
     const requestHeaders = new Headers({
       "Content-Type": "application/json",
-      "Authorization": "Bearer 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"
+      "Authorization": "Bearer <your_openai_api_key>"
     });
 
     console.log(question)
