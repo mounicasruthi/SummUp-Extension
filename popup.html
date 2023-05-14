@@ -7,11 +7,15 @@
   <body>
     <h1 class="title">SummUp</h1>
     <p class="tagline">Simplify your reading, amplify your learning</p>
-    <button id="summarize-btn">Summarize</button>
+    <button id="summarize-btn">Summarize Article</button>
+
+    <form>
+      <!-- <label for="question-input">Ask a Question:</label> -->
+      <input type="text" id="question-input" placeholder="Type your question here" name="question">
+      <button id="ask-btn" type="submit">Ask Question</button>
+    </form>
 
     <script  type="module" src="scripts/popup.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/openai"></script>
-<script src="https://cdn.jsdelivr.net/npm/dotenv"></script> -->
 
   </body>
 </html>
