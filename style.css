@@ -11,30 +11,6 @@ p {
   text-align: justify;
   }
   
-   /* .p {
-    width: 60%;
-    margin: 0 auto;
-    padding: 30px;
-    background-color: #F2F3F5;
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
-  }
-  
-  h1 {
-    font-size: 32px;
-    color: #5C5C5C;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  p {
-    font-size: 20px;
-    color: #7D7D7D;
-    line-height: 1.5;
-    text-align: justify;
-    margin: 0;
-  }
-  
   /* Glassmorphism styling */
   p {
     background: rgba(255, 255, 255, 0.15);
