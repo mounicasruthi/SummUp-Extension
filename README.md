@@ -15,9 +15,10 @@ In addition to generating summaries, SummUp also has a feature that allows users
 To install and run the SummUp Chrome extension locally, follow these steps:
 
 1. Clone the repository to your local machine.
-2. Open Chrome and navigate to `chrome://extensions`.
-3. Enable developer mode by clicking on the toggle switch in the upper-right corner of the page.
-4. Click on the "Load unpacked" button and select the directory where you cloned the repository.
-5. The SummUp extension should now be installed in your browser and can be accessed by clicking on the SummUp icon in your browser's toolbar.
+2. Make sure to use your own OpenAI API keys in the background script.
+3. Open Chrome and navigate to `chrome://extensions`.
+4. Enable developer mode by clicking on the toggle switch in the upper-right corner of the page.
+5. Click on the "Load unpacked" button and select the directory where you cloned the repository.
+6. The SummUp extension should now be installed in your browser and can be accessed by clicking on the SummUp icon in your browser's toolbar.
 
 That's it! You should now be able to use the SummUp Chrome extension to generate summaries of web pages and ask the extension questions based on the article text directly from your browser.
